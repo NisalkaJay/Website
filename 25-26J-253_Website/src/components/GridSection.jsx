@@ -57,7 +57,17 @@ const GridSection = ({ id, title, subtitle, items, isPresentation = false, bgCla
                             borderColor: 'var(--accent-violet)',
                             color: 'var(--accent-violet)',
                             fontWeight: '700',
-                            borderRadius: '8px'
+                            borderRadius: '8px',
+                            backgroundColor: 'transparent' // Explicitly set to transparent initially
+                          }}
+                          // Added hover effects here to match the single-file button
+                          onMouseOver={(e) => {
+                            e.currentTarget.style.backgroundColor = 'var(--accent-light)';
+                            e.currentTarget.style.color = '#fff';
+                          }}
+                          onMouseOut={(e) => {
+                            e.currentTarget.style.backgroundColor = 'transparent';
+                            e.currentTarget.style.color = 'var(--accent-violet)';
                           }}
                         >
                           {expandedId === idx ? <FaChevronUp /> : <FaChevronDown />} 
@@ -69,8 +79,8 @@ const GridSection = ({ id, title, subtitle, items, isPresentation = false, bgCla
                             {item.links.map((link, lIdx) => (
                               <a 
                                 key={lIdx}
-                                href={link.file} // Reverted to local file path
-                                download // Triggers direct download
+                                href={link.file} 
+                                download 
                                 className="d-flex align-items-center gap-2 mb-2 p-2 rounded"
                                 style={{ 
                                   fontSize: '13px', 
@@ -90,8 +100,8 @@ const GridSection = ({ id, title, subtitle, items, isPresentation = false, bgCla
                     ) : (
                       <Button 
                         as="a"
-                        href={item.file} // Reverted to local file path
-                        download // Triggers direct download
+                        href={item.file} 
+                        download 
                         variant="outline-primary" 
                         className="w-100 py-2 d-flex align-items-center justify-content-center gap-2"
                         style={{
