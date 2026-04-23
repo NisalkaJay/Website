@@ -36,6 +36,7 @@ import charterFile from '../assets/files/charter.pdf';
 import researchPaperFile from '../assets/files/research_paper.pdf';
 import checklist1File from '../assets/files/checklist1.zip';
 //import checklist2File from '../assets/files/checklist2.pdf';
+//
 
 // Proposal Report Imports
 import propPula from '../assets/files/proposal_pula.pdf';
