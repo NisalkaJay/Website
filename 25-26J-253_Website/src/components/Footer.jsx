@@ -27,7 +27,7 @@ export const Footer = () => {
           <Col lg={4} md={6}>
             <h4 style={{ color: '#fff', fontWeight: '800', marginBottom: '25px', fontSize: '18px' }}>Useful Links</h4>
             <ul style={{ listStyle: 'none', padding: 0, fontSize: '14px' }}>
-              {['Home', 'About Us', 'Features', 'Milestones', 'Team'].map(link => (
+              {['Home', 'About', 'Features', 'Milestones', 'Team'].map(link => (
                 <li key={link} className="mb-2">
                   <a href={`#${link.toLowerCase().replace(' ', '')}`} style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.3s' }} className="footer-link">
                     <span style={{ color: '#FF8904', marginRight: '10px' }}>»</span> {link}

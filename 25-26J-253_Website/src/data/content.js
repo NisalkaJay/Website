@@ -13,23 +13,42 @@ import {
 } from 'react-icons/fc';
 
 // ==========================================
-import pulasthiImg from '../assets/images/pula.png';
+import pulasthiImg from '../assets/images/pul.jpeg';
 import nisalkaImg from '../assets/images/nisalka.png';
-import malikshiImg from '../assets/images/malikshi.png';
-import dimalshaImg from '../assets/images/dimalsha.png';
+import malikshiImg from '../assets/images/maliksh.jpeg';
+import dimalshaImg from '../assets/images/dimalsh.jpeg';
 import mahimaImg from '../assets/images/mahima.jpeg';
 import osuriImg from '../assets/images/osuri.png';
 
 // Import your field visit photos
-import visit1 from '../assets/images/clinic-visit-1.png';
-import visit2 from '../assets/images/clinic-visit-2.png';
-import visit3 from '../assets/images/clinic-visit-3.png';
+import visit1 from '../assets/images/clinic-visit-1.jpeg';
+import visit2 from '../assets/images/clinic-visit-2.jpeg';
+import visit3 from '../assets/images/clinic-visit-3.jpeg';
 
 // import presentation slides
-import propSlide from '../assets/files/proposal.pdf';
-import prog1Slide from '../assets/files/progress1.pdf';
-import prog2Slide from '../assets/files/progress2.pdf';
-import finalSlide from '../assets/files/progress2.pdf'; // put actual one after finalizing
+import propSlide from '../assets/files/proposal_compressed.pdf';
+import prog1Slide from '../assets/files/progress1_compressed.pdf';
+import prog2Slide from '../assets/files/progress2_compressed.pdf';
+//import finalSlide from '../assets/files/progress2_compressed.pdf'; 
+
+// NEW: Document Imports
+import charterFile from '../assets/files/charter.pdf';
+import researchPaperFile from '../assets/files/research_paper.pdf';
+import checklist1File from '../assets/files/checklist1.zip';
+//import checklist2File from '../assets/files/checklist2.pdf';
+
+// Proposal Report Imports
+import propPula from '../assets/files/proposal_pula.pdf';
+import propNisalka from '../assets/files/proposal_nisalka.pdf';
+import propMalikshi from '../assets/files/proposal_malikshi.pdf';
+import propDimalsha from '../assets/files/proposal_dimalsha.pdf';
+
+// Final Report Imports
+//import finalMerged from '../assets/files/final_merged.pdf';
+//import finalPula from '../assets/files/final_pula.pdf';
+//import finalNisalka from '../assets/files/final_nisalka.pdf';
+//import finalMalikshi from '../assets/files/final_malikshi.pdf';
+//import finalDimalsha from '../assets/files/final_dimalsha.pdf';
 
 export const techLogos = [
   { name: 'Flutter', icon: SiFlutter, color: '#02569B' },
@@ -37,7 +56,7 @@ export const techLogos = [
   { name: 'Scikit-Learn', icon: SiScikitlearn, color: '#F7931E' },
   { name: 'Unity 3D', icon: SiUnity, color: '#ffffff' },
   { name: 'TensorFlow', icon: SiTensorflow, color: '#FF6F00' },
-  { name: 'XGBoost', icon: FaDatabase, color: '#10B981' }, // Generic icon for XGBoost/Data
+  { name: 'XGBoost', icon: FaDatabase, color: '#10B981' }, 
   { name: 'Federated Learning', icon: FaBrain, color: '#6D28D9' },
   { name: 'Explainable AI', icon: FaEye, color: '#3B82F6' }
 ];
@@ -90,29 +109,33 @@ export const domainContent = {
     title: 'Methodology',
     text : 'PregAssist utilizes a Hybrid Mobile Architecture that securely couples a native Flutter logic layer with a high-fidelity Unity 3D engine using deep-linking. The fetal health module applies a Regularized Random Forest classifier optimized with a lightweight "shadow" surrogate to generate clinician-readable Explainable AI (XAI) counterfactuals entirely on-device. The physical health module processes normalized maternal vital signs through an XGBoost model. For mental health, a multimodal fusion mechanism evaluates text via TF-IDF/Logistic Regression and facial imagery via CNNs, employing federated learning to update models locally without exposing sensitive user data. Finally, the emergency training module intentionally substitutes probabilistic ML with a deterministic Forward-Chaining Rule-Based Expert System to ensure zero stochastic error and strict adherence to WHO/ACOG clinical guidelines during AR simulations.'
   },
-'Technologies': {
-  title: 'Technologies',
-  text: `The project leverages a robust stack of mobile and machine learning technologies to deliver zero-latency, offline-capable assistance. The front-end framework is built on Flutter for cross-platform mobile compatibility, directly interfacing with a nested Unity 3D engine to render high-fidelity Augmented Reality environments. The machine learning backend relies on Python and Flask REST APIs. Data modeling is executed using Extreme Gradient Boosting (XGBoost) for physiological risk prediction and Random Forest for CTG classification. The mental health module integrates Convolutional Neural Networks (CNN) for facial emotion recognition via the AffectNet dataset, and Logistic Regression with TF-IDF vectorization for text analysis via the GoEmotions dataset. Local storage, deep-linking protocols, and federated learning architecture ensure the system remains functional and secure in low-connectivity settings.`
-}
+  'Technologies': {
+    title: 'Technologies',
+    text: `The project leverages a robust stack of mobile and machine learning technologies to deliver zero-latency, offline-capable assistance. The front-end framework is built on Flutter for cross-platform mobile compatibility, directly interfacing with a nested Unity 3D engine to render high-fidelity Augmented Reality environments. The machine learning backend relies on Python and Flask REST APIs. Data modeling is executed using Extreme Gradient Boosting (XGBoost) for physiological risk prediction and Random Forest for CTG classification. The mental health module integrates Convolutional Neural Networks (CNN) for facial emotion recognition via the AffectNet dataset, and Logistic Regression with TF-IDF vectorization for text analysis via the GoEmotions dataset. Local storage, deep-linking protocols, and federated learning architecture ensure the system remains functional and secure in low-connectivity settings.`
+  },
+  'Why These Technologies?': { 
+    title: 'Why These Technologies?',
+    text: 'Each technology in the PregAssist stack was selected to meet specific clinical and environmental constraints. Flutter was chosen for its high-performance UI rendering and seamless integration with C++ based Unity 3D engines, which are essential for high-fidelity AR emergency simulations. Python and XGBoost provide the optimal balance between high predictive accuracy for maternal vitals and computational efficiency for mobile deployment. Federated Learning is utilized to ensure that sensitive maternal mental health data never leaves the device, addressing critical privacy gaps found in cloud-based health bots. Finally, Explainable AI (XAI) models were prioritized to build clinician trust by providing transparent reasoning for every automated fetal health diagnosis.'
+  }
 };
 
-// SLIIT Standard Milestones
+// SLIIT Standard Milestones 
 export const milestones = [
-  { title: 'Topic Assessment Form (TAF)', date: 'June 2025', marks: '5%', icon: FcDocument, type: 'Individual' },
-  { title: 'Project Charter', date: 'July 2025', marks: '10%', icon: FcBriefcase, type: 'Group' },
-  { title: 'Proposal reports (draft)', date: '31st of August 2025', marks: '5%', icon: FcReading, type: 'Group' },
-  { title: 'Proposal presentation', date: '8th of September 2025', marks: '15%', icon: FaTv, type: 'Group' },
-  { title: 'Proposal reports (final)', date: '28th of September 2025', marks: '10%', icon: FcDocument, type: 'Group' },
-  { title: 'Progress Presentation – I', date: '5th of January 2026', marks: '10%', icon: FaTv, type: 'Group' },
-  { title: 'Check List I', date: '11th of January 2026', marks: '5%', icon: FcSurvey, type: 'Individual' },
-  { title: 'Progress Presentation – II', date: '9th of March 2026', marks: '10%', icon: FaTv, type: 'Group' },
-  { title: 'Research paper', date: '8th of May 2026', marks: '20%', icon: FcGraduationCap, type: 'Individual' },
-  { title: 'Final reports', date: '26th of April 2026', marks: '15%', icon: FcDocument, type: 'Group' },
-  { title: 'Check List II', date: '27th of April 2026', marks: '5%', icon: FcSurvey, type: 'Individual' },
-  { title: 'Final presentation & VIVA', date: '4th of May 2026', marks: '25%', icon: FcGraduationCap, type: 'Group' },
-  { title: 'Project website', date: '4th of May 2026', marks: '5%', icon: FaLaptopCode, type: 'Group' },
-  { title: 'Research logbook', date: '4th of May 2026', marks: '5%', icon: FcGallery, type: 'Individual' },
-  { title: 'Submission of RP', date: '8th of May 2026', marks: 'N/A', icon: FcKindle, type: 'Individual' },
+  { title: 'Topic Assessment Form (TAF)', date: 'June 2025', marks: '5%', icon: FcDocument, type: 'Individual', details: 'Submission and formal approval of the research topic and scope by the project coordinator.' },
+  { title: 'Project Charter', date: 'July 2025', marks: '10%', icon: FcBriefcase, type: 'Group', details: 'Definition of project goals, stakeholders, high-level requirements, and the formal authorization of the research project.' },
+  { title: 'Proposal reports (draft)', date: '31st of August 2025', marks: '5%', icon: FcReading, type: 'Group', details: 'Initial comprehensive documentation of the literature survey, problem statement, and proposed methodology.' },
+  { title: 'Proposal presentation', date: '8th of September 2025', marks: '15%', icon: FaTv, type: 'Group', details: 'Formal presentation to a panel of examiners to defend the feasibility and clinical significance of the research.' },
+  { title: 'Proposal reports (final)', date: '28th of September 2025', marks: '10%', icon: FcDocument, type: 'Group', details: 'Submission of the finalized project proposal incorporating feedback from the viva panel.' },
+  { title: 'Progress Presentation – I', date: '5th of January 2026', marks: '10%', icon: FaTv, type: 'Group', details: 'Review of the initial implementation phase, data collection progress, and model prototyping.' },
+  { title: 'Check List I', date: '11th of January 2026', marks: '5%', icon: FcSurvey, type: 'Individual', details: 'Verification of individual researcher progress and alignment with initial project objectives.' },
+  { title: 'Progress Presentation – II', date: '9th of March 2026', marks: '10%', icon: FaTv, type: 'Group', details: 'Demonstration of the integrated prototype, preliminary results from the Federated Learning and AR modules.' },
+  { title: 'Research paper', date: '8th of May 2026', marks: '20%', icon: FcGraduationCap, type: 'Individual', details: 'Submission of the technical research paper detailing the innovative contributions of the study.' },
+  { title: 'Final reports', date: '26th of April 2026', marks: '15%', icon: FcDocument, type: 'Group', details: 'Submission of the complete project dissertation covering all technical aspects and final findings.' },
+  { title: 'Check List II', date: '27th of April 2026', marks: '5%', icon: FcSurvey, type: 'Individual', details: 'Final individual assessment to confirm completion of all research tasks and deliverables.' },
+  { title: 'Final presentation & VIVA', date: '4th of May 2026', marks: '25%', icon: FcGraduationCap, type: 'Group', details: 'Final defense of the project before the examination panel, including a live demonstration of the PregAssist app.' },
+  { title: 'Project website', date: '4th of May 2026', marks: '5%', icon: FaLaptopCode, type: 'Group', details: 'Publication of the comprehensive project website containing all research artifacts and team details.' },
+  { title: 'Research logbook', date: '4th of May 2026', marks: '5%', icon: FcGallery, type: 'Individual', details: 'Submission of daily/weekly records of research activities and supervisor consultations.' },
+  { title: 'Submission of RP', date: '8th of May 2026', marks: 'N/A', icon: FcKindle, type: 'Individual', details: 'Final submission of the research paper for publication consideration.' },
 ];
 
 export const team = [
@@ -121,6 +144,7 @@ export const team = [
     role: 'Undergraduate Researcher', 
     module: 'Decision Support System for Fetal Health Classification',
     image: pulasthiImg, 
+    email: 'pulasthiwork@gmail.com', 
     social: { linkedin: 'https://www.linkedin.com/in/pulasthi-buddika-2ab328268?utm_source=share_via&utm_content=profile&utm_medium=member_android', github: 'https://github.com/pulasthiBuddikaGit' } 
   },
   { 
@@ -128,6 +152,7 @@ export const team = [
     role: 'Undergraduate Researcher', 
     module: 'AR and AI-Driven Module for Personalized Pregnancy Emergency Training',
     image: nisalkaImg, 
+    email: 'nisalka.j@sliit.lk', 
     social: { linkedin: 'https://www.linkedin.com/in/nisalka-j-863b33287?utm_source=share_via&utm_content=profile&utm_medium=member_android', github: 'https://github.com/NisalkaJay' } 
   },
   { 
@@ -135,6 +160,7 @@ export const team = [
     role: 'Undergraduate Researcher', 
     module: 'AI-Based Mental Health Monitoring and Risk Prediction',
     image: malikshiImg, 
+    email: 'malikshi.p@sliit.lk', 
     social: { linkedin: 'https://www.linkedin.com/in/malikshi-perera-758474216?utm_source=share_via&utm_content=profile&utm_medium=member_android', github: 'https://github.com/MalikshiPerera' } 
   },
   { 
@@ -142,52 +168,99 @@ export const team = [
     role: 'Undergraduate Researcher', 
     module: 'Physical Health Monitoring and Wellness guidance',
     image: dimalshaImg, 
+    email: 'dimalsha.n@sliit.lk', 
     social: { linkedin: 'https://www.linkedin.com/in/dimalsha-nethmini-944123246?utm_source=share_via&utm_content=profile&utm_medium=member_android', github: 'https://github.com/DimalshaWijethunga' } 
   },
   { 
     name: 'Dr. Mahima Weerasinghe', 
     role: 'Supervisor (Senior Lecturer)', 
     image: mahimaImg, 
+    email: 'mahima.w@sliit.lk', 
     social: { linkedin: 'https://www.linkedin.com/in/mahimaweerasinghe?utm_source=share_via&utm_content=profile&utm_medium=member_android', github: '' } 
   },
   { 
     name: 'Osuri Dunuwila', 
     role: 'Co-Supervisor (Assistant Lecturer)', 
     image: osuriImg, 
+    email: 'osuri.d@sliit.lk', 
     social: { linkedin: 'https://www.linkedin.com/in/osuri-dunuwila-877843107?utm_source=share_via&utm_content=profile&utm_medium=member_android', github: '' } 
   }
 ];
 
 export const documents = [
-  { title: 'Project Charter', description: 'The document gives the information regarding the statement of scope, objectives overview, an outline of scope, an approximate schedule and people who are participating in a project.', icon: FcBriefcase, file: '#' },
-  { title: 'Project Proposal', description: 'The document contains details like goals, objectives, important dates, milestones and requirements needed to start and complete the project.', icon: FcDocument, file: '#' },
-  { title: 'Research Paper', description: 'A research paper contains writing that provides Literature review, Research methodology, analysis, interpretation, and argument based on in-depth independent research.', icon: FcGraduationCap, file: '#' },
+  { 
+    title: 'Project Charter', 
+    description: 'The document gives information regarding the statement of scope, objectives overview, and approximate schedule.', 
+    icon: FcBriefcase, 
+    file: charterFile 
+  },
+  { 
+    title: 'Project Proposal', 
+    description: 'Comprehensive justification of research goals. Includes the 4 individual reports.', 
+    icon: FcDocument, 
+    links: [
+      { label: 'Individual Report - Pulasthi', file: propPula },
+      { label: 'Individual Report - Nisalka', file: propNisalka },
+      { label: 'Individual Report - Malikshi', file: propMalikshi },
+      { label: 'Individual Report - Dimalsha', file: propDimalsha },
+    ]
+  },
+  { 
+    title: 'Research Paper', 
+    description: 'A technical manuscript detailing the literature review, methodology, analysis, and interpretation.', 
+    icon: FcGraduationCap, 
+    file: researchPaperFile 
+  },
+  { 
+    title: 'Checklist I', 
+    description: 'Consist of ReadMe file and link to the GitHub repository. This checklist is for the first progress presentation', 
+    icon: FcSurvey, 
+    file: checklist1File 
+  },
+  { 
+    title: 'Checklist II (Provision)', 
+    description: 'Consist of MS Planner Report. This checklist is for the final presentation.', 
+    icon: FcSurvey, 
+    //file: checklist2File 
+  },
+  { 
+    title: 'Final Reports (Provision)', 
+    description: 'The complete project dissertation. Includes the merged final report and 4 individual final reports.', 
+    icon: FcDocument, 
+    links: [
+      { label: 'Merged Final Document', file: '' },
+      { label: 'Final Report - Pulasthi', file: '' },
+      { label: 'Final Report - Nisalka', file: '' },
+      { label: 'Final Report - Malikshi', file: '' },
+      { label: 'Final Report - Dimalsha', file: '' },
+    ]
+  },
 ];
 
 export const presentations = [
   { 
     title: 'Proposal Presentation', 
-    description: 'Initial pitch detailing the research gap, objectives, and proposed architecture for the PregAssist platform.', 
+    description: 'Initial pitch detailing research gap and proposed architecture.', 
     icon: FaTv, 
     file: propSlide
   },
   { 
     title: 'Project Progress 1 Presentation', 
-    description: 'Status update covering initial dataset preprocessing, CTG classification, and physical risk model training.', 
+    description: 'Status update on data preprocessing and initial model prototyping.', 
     icon: FaTv, 
     file: prog1Slide
   },
   { 
     title: 'Project Progress 2 Presentation', 
-    description: 'Demonstration of the integrated AR emergency module and the federated learning mental health chatbot.', 
+    description: 'Integration update featuring AR training and Federated Learning bot.', 
     icon: FaTv, 
     file: prog2Slide
   },
   { 
-    title: 'Final Presentation', 
-    description: 'Comprehensive overview of all research findings, system evaluations, and final demonstration of the complete app.', 
+    title: 'Final Presentation (Provision)', 
+    description: 'Comprehensive overview of research findings and final system evaluation. [cite: 78]', 
     icon: FaTv, 
-    file: finalSlide
+    //file: finalSlide
   },
 ];
 
@@ -195,24 +268,23 @@ export const fieldVisits = [
   { 
     image: visit1, 
     title: 'Clinical Requirement Gathering', 
-    description: 'Consulting with nursing staff at a local clinic to understand the real-world workflow of maternal care.' 
+    description: 'Consulting with nursing staff at a local clinic to understand real-world workflows.' 
   },
   { 
     image: visit2, 
     title: 'Doctor Consultation', 
-    description: 'Discussing the integration of our decision support system and risk prediction models with medical professionals.' 
+    description: 'Discussing the integration of AI models with medical professionals.' 
   },
   { 
     image: visit3, 
     title: 'Field Interviews', 
-    description: 'Gathering qualitative data on the challenges faced by healthcare workers during routine antenatal checkups.' 
+    description: 'Gathering qualitative data on healthcare worker challenges.' 
   }
 ];
 
 export const footerInfo = {
   institution: 'Sri Lanka Institute of Information Technology (SLIIT)',
   location: 'Malabe, Sri Lanka',
-  phone: '+94 70 165 8323', // Update this if needed
-  email: 'pulasthiwork@gmail.com'
+  phone: '+94 70 165 8323',
+  email: 'pulasthiwork@gmail.com' 
 };
-

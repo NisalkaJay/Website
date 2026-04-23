@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container, Form, InputGroup } from 'react-bootstrap';
 import { FaSearch } from 'react-icons/fa';
-import logo from '../assets/images/logo.png';
+import logo from '../assets/images/logo.jpeg';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);

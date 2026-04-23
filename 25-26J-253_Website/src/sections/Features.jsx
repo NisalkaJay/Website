@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { features } from '../data/content';
-import heroBg from '../assets/images/app-bg.png'; // Remember to replace this image with a screenshot of your PregAssist app!
+import heroBg from '../assets/images/app-b.jpeg'; // Remember to replace this image with a screenshot of your PregAssist app!
 
 const Features = () => {
   return (

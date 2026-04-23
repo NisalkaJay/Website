@@ -12,9 +12,10 @@ const Milestones = () => {
         <div className="section-title" data-aos="fade-up">
           <h2>Project Milestones</h2>
           <p style={{ 
-            color: '#434343', 
+            color: '#000000', 
             fontSize: '16px', 
-            marginTop: '10px' 
+            marginTop: '10px',
+            fontWeight: '600'
           }}>
             Tracking the development and evaluation phases of the PregAssist platform.
           </p>
@@ -54,8 +55,19 @@ const Milestones = () => {
                     <span style={{ fontSize: '12px', fontWeight: 'bold', color: '#01346d' }}>{m.date}</span>
                     <Badge bg={m.type === 'Group' ? 'info' : 'primary'} style={{ fontSize: '10px' }}>{m.type}</Badge>
                   </div>
-                  <h4 style={{ fontSize: '18px', fontWeight: '700', color: '#000000' }}>{m.title}</h4>
-                  <div className="d-flex justify-content-between align-items-center mt-3">
+                  <h4 style={{ fontSize: '18px', fontWeight: '700', color: '#000000', marginBottom: '10px' }}>{m.title}</h4>
+                  
+                  {/* NEW: Assessment Details added to meet guideline requirements  */}
+                  <p style={{ 
+                    fontSize: '13px', 
+                    color: '#444', 
+                    lineHeight: '1.5',
+                    marginBottom: '15px' 
+                  }}>
+                    {m.details}
+                  </p>
+
+                  <div className="d-flex justify-content-between align-items-center mt-auto">
                     <span style={{ fontSize: '12px', color: '#000000' }}>Mark Allocation: <strong>{m.marks}</strong></span>
                   </div>
                 </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { FaLinkedin, FaGithub, FaTwitter, FaUserCircle } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaTwitter, FaUserCircle, FaEnvelope } from 'react-icons/fa'; // Added FaEnvelope
 import { team } from '../data/content';
 
 const Team = () => {
@@ -45,9 +45,21 @@ const Team = () => {
                     )}
                   </div>
                   <h4 style={{ fontSize: '20px', fontWeight: '800', color: '#2d3748', marginBottom: '5px' }}>{member.name}</h4>
-                  <p style={{ fontSize: '14px', color: '#122037', marginBottom: '15px', fontWeight: '600' }}>{member.role}</p>
+                  <p style={{ fontSize: '14px', color: '#122037', marginBottom: '10px', fontWeight: '600' }}>{member.role}</p>
                   
-                  {/* NEW: Component/Module Badge */}
+                  {/* NEW: Email Display added to meet guideline requirements  */}
+                  {member.email && (
+                    <div style={{ marginBottom: '15px', fontSize: '12px' }}>
+                      <a 
+                        href={`mailto:${member.email}`} 
+                        style={{ color: '#4a5568', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '5px' }}
+                      >
+                        <FaEnvelope style={{ color: '#51A2FF' }} /> {member.email}
+                      </a>
+                    </div>
+                  )}
+                  
+                  {/* NEW: Component/Module Badge [cite: 84] */}
                   {member.module && (
                     <div style={{ marginBottom: '20px' }}>
                       <span style={{
@@ -55,7 +67,7 @@ const Team = () => {
                         color: '#ffffff',
                         padding: '6px 12px',
                         borderRadius: '20px',
-                        fontSize: '12px',
+                        fontSize: '11px',
                         fontWeight: '700',
                         display: 'inline-block'
                       }}>
