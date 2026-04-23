@@ -34,7 +34,7 @@ const GridSection = ({ id, title, subtitle, items, isPresentation = false, bgCla
                   <div>
                     <div className="mb-4 d-inline-block p-1" style={{
                       fontSize: '60px',
-                      color: '#51A2FF' 
+                      color: '#FF8904' 
                     }}>
                       {item.icon ? <item.icon /> : (isPresentation ? <FaTv /> : <FaFilePdf />)}
                     </div>
